@@ -1,6 +1,8 @@
-﻿namespace UdemyMVC.Repositories
+﻿using UdemyMVC.Models;
+
+namespace UdemyMVC.Repositories
 {
-    public interface IEnrollmentRepository
+    public interface IEnrollmentRepository : IRepository<Enrollment>
     {
     }
 }
