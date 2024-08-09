@@ -5,6 +5,6 @@ namespace UdemyMVC.Repositories
 {
     public class CategoryCourseRepository : Repository<CategoryCourse>, ICategoryCourseRepository
     {
-        public CategoryCourseRepository(DbContext context) : base(context) { }
+        public CategoryCourseRepository(UdemyDataBase context) : base(context) { }
     }
 }

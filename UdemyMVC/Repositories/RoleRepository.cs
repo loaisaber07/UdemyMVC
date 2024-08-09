@@ -5,6 +5,6 @@ namespace UdemyMVC.Repositories
 {
     public class RoleRepository : Repository<Role>, IRoleRepository
     {
-        public RoleRepository(DbContext context) : base(context) { }
+        public RoleRepository(UdemyDataBase context) : base(context) { }
     }
 }

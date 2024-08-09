@@ -7,7 +7,7 @@ namespace UdemyMVC.Repositories
 {
     public class CourseRepository : Repository<Course>, ICourseRepository
     {
-        public CourseRepository(DbContext context) : base(context) { }
+        public CourseRepository(UdemyDataBase context) : base(context) { }
 
         public async Task<IEnumerable<Course>> GetCoursesByInstructorIdAsync(int instructorId)
         {

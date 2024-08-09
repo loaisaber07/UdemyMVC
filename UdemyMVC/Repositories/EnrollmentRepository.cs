@@ -5,6 +5,6 @@ namespace UdemyMVC.Repositories
 {
     public class EnrollmentRepository : Repository<Enrollment>, IEnrollmentRepository
     {
-        public EnrollmentRepository(DbContext context) : base(context) { }
+        public EnrollmentRepository(UdemyDataBase context) : base(context) { }
     }
 }

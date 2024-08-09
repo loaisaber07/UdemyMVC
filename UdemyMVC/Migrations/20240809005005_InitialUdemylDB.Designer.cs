@@ -12,8 +12,8 @@ using UdemyMVC.Models;
 namespace UdemyMVC.Migrations
 {
     [DbContext(typeof(UdemyDataBase))]
-    [Migration("20240806004541_ForAhmed")]
-    partial class ForAhmed
+    [Migration("20240809005005_InitialUdemylDB")]
+    partial class InitialUdemylDB
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

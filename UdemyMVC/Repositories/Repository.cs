@@ -1,15 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using UdemyMVC.Models;
 
 namespace UdemyMVC.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        protected readonly DbContext _context;
+        protected readonly UdemyDataBase _context;
         protected readonly DbSet<T> _dbSet;
 
-        public Repository(DbContext context)
+        public Repository(UdemyDataBase context)
         {
             _context = context;
             _dbSet = _context.Set<T>();

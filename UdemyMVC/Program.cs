@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using UdemyMVC.Models;
+using UdemyMVC.Repositories;
 
 namespace UdemyMVC
 {
@@ -12,9 +13,10 @@ namespace UdemyMVC
 			var builder = WebApplication.CreateBuilder(args);
 
 			// Add services to the container.
-			builder.Services.AddControllersWithViews(); 
-			//Inject DataBase Connection 
-			builder.Services.AddDbContext<UdemyDataBase>(option =>
+			builder.Services.AddControllersWithViews();
+            builder.Services.AddScoped<ICourseRepository, CourseRepository>();
+            //Inject DataBase Connection 
+            builder.Services.AddDbContext<UdemyDataBase>(option =>
 			{
 				option.UseSqlServer(builder.Configuration.GetConnectionString("cs")); 
 			});
