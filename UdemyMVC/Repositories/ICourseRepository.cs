@@ -8,5 +8,6 @@ namespace UdemyMVC.Repositories
     {
 
         Task<IEnumerable<Course>> GetCoursesByInstructorIdAsync(int instructorId);
+        Task<Course?> GetCoursesByCourseIdAsync(int courseId);
     }
 }
